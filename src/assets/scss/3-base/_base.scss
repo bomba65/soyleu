@@ -1,0 +1,273 @@
+html {
+	font-size: 10px;
+}
+body {
+	font-size: 1.6rem;
+	line-height: 1.24;
+	margin-top: 9rem;
+	overflow-y: scroll;
+	color: $dark-blue;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-family: 'Segoe', Helvetica, Arial, sans-serif !important;
+
+	background-repeat: no-repeat;
+	background-position: top right;
+	background-size: 65%;
+	background-image: url($path-img + "/bg-circle.svg");
+
+	.section-login {
+		height: calc(100vh - 9rem);
+	}
+
+	@include media-breakpoint-down(sm) {
+		.section-login {
+			background-image: none !important;
+		}
+	}
+	@include media-breakpoint-down(xs) {
+		margin-top: 7.2rem;
+		font-size: 1.4rem;
+		.section-login {
+			height: calc(100vh - 7.2rem);
+		}
+	}
+}
+
+a {
+	color: $purple;
+
+	&:hover {
+		color: $purple;
+	}
+}
+
+.pagination {
+	.page-link {
+		color: $purple;
+		padding: 1rem 1.5rem;
+	}
+	.page-item.active .page-link {
+		background: $purple;
+		border-color: $purple;
+	}
+}
+
+.image-div {
+	div {
+		border-radius: 50%;
+		padding-bottom: 100%;
+		background-size: cover;
+		background-position: center;
+	}
+}
+
+section {
+	padding: 5rem 0;
+}
+
+nav {
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 100;
+	position: fixed;
+	padding: 1.5rem 0;
+	background: #fff;
+	border-bottom: $purple;
+	box-shadow: 0 .5rem 1.5rem rgba($purple, 0.15);
+
+	img {
+		height: 6rem;
+	}
+
+	@include media-breakpoint-down(xs) {
+		img {
+			height: 4rem;
+		}
+	}
+}
+
+.tab-pane {
+	outline: none;
+}
+.nav-tabs {
+	border-bottom: 2px solid #dee2e6;
+	.nav-item {
+		font-family: 'Mono';
+		margin-bottom: -2px;
+	}
+	.nav-link.active, .nav-item.show .nav-link {
+		color: $dark-blue;
+		border: none;
+		font-weight: bold;
+		border-bottom: 2px solid $dark-blue;
+	}
+	.nav-link:hover, .nav-link:focus {
+		border: none;
+		color: $dark-blue;
+		border-bottom: 2px solid $dark-blue;
+	}
+	.nav-link {
+		border: none;
+		color: $gray;
+		padding: 2rem 1.5rem;
+	}
+}
+
+.discussion-list {
+	padding: 0;
+	list-style: none;
+	.discussion-list-item {
+		display: flex;
+		padding: 2rem 0;
+		align-items: flex-start;
+		border-bottom: 1px solid #dee2e6;
+
+		.image {
+			min-width: 6.5rem;
+			margin-right: 1.5rem;
+			div {
+				border-radius: 50%;
+				padding-bottom: 100%;
+				background-size: cover;
+				background-position: center;
+			}
+
+			@include media-breakpoint-down(xs) {
+				min-width: 4rem;
+			}
+		}
+
+		.name {
+			font-size: 2rem;
+			color: $dark-blue;
+			font-weight: bold;
+		}
+
+		.fasten {
+			color: #fff;
+			margin-right: 1rem;
+			border-radius: 5px;
+			background: $purple;
+			display: inline-block;
+			padding: 0.3rem 0.8rem;
+		}
+		
+		.info {
+			color: $gray;
+			display: flex;
+			margin-top: 1rem;
+			align-items: center;
+
+			.date {
+				margin-left: 2.5rem;
+			}
+		}
+		
+		.likes, .comments {
+			color: $gray;
+			display: flex;
+			font-weight: bold;
+			align-items: center;
+			margin-left: auto;
+
+			img {
+				height: 2.5rem;
+				margin-right: 1rem;
+			}
+		}
+
+		&:last-child {
+			border: none;
+		}
+	}
+}
+
+.likes {
+	display: flex;
+	font-weight: bold;
+	align-items: center;
+	margin-left: auto;
+
+	img {
+		height: 2.5rem;
+		margin-right: 1rem;
+	}
+
+	&.logged {
+		img {
+			cursor: pointer;
+		}
+	}
+}
+
+.sections-list {
+	background: #fff;
+	border-radius: 10px;
+	padding: 3rem;
+
+	box-shadow: 0 0 1rem rgba(#000, 0.05);
+
+
+	@include media-breakpoint-down(xs) {
+		padding: 1.5rem;
+	}
+
+	.sections-list-item {
+		display: flex;
+		cursor: pointer;
+		padding: 1.5rem 1rem;
+		align-items: center;
+		transition: 0.2s;
+		border-bottom: 1px solid #dee2e6;
+
+		&:last-child {
+			border: none;
+		}
+		&:hover, &.active {
+			background: rgba($purple, 0.2);
+		}
+
+		.image {
+			min-width: 40px;
+			margin-right: 1.5rem;
+
+			div {
+				padding-bottom: 100%;
+				background-size: contain;
+				background-position: center;
+			}
+		}
+	}
+}
+
+.similar-list {
+	background: #fff;
+	border-radius: 10px;
+	padding: 3rem;
+
+	box-shadow: 0 0 1rem rgba(#000, 0.05);
+
+	.similar-list-item {
+		color: $gray;
+		padding: 1.5rem 0;
+		border-bottom: 1px solid #dee2e6;
+
+		a {
+			display: block;
+			font-weight: bold;
+			margin-bottom: 1rem;
+		}
+
+		&:last-child {
+			border: none;
+			padding-bottom: 0;
+		}
+	}
+
+	@include media-breakpoint-down(xs) {
+		padding: 1.5rem;
+	}
+}
+

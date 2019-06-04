@@ -1,0 +1,45 @@
+.section-bg, .pg-bg {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: -1;
+}
+
+.type-none {
+  list-style: none;
+}
+
+a.no-appearance {
+  color: inherit;
+  text-decoration: none;
+  &.no-hover-appearance:hover {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.h-line {
+  width: 26px;
+  height: 1.76px;
+  background: $white;
+}
+
+.slick-rounded {
+  border-radius: 10px;
+  overflow: hidden;
+}
+.slick-rounded-md {
+  @include media-breakpoint-up(md) {
+    border-radius: 10px;
+    overflow: hidden;
+  }
+}
+.slick-rounded-sm {
+  @include media-breakpoint-up(sm) {
+    border-radius: 10px;
+    overflow: hidden;
+  }
+}

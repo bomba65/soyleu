@@ -1,0 +1,17 @@
+.box.no-bg {
+  background: #002420;
+  background: -moz-linear-gradient(-45deg, #002420 0%, #5e85ba 77%, #d567ab 100%);
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, #002420), color-stop(77%, #5e85ba), color-stop(100%, #d567ab));
+  background: -webkit-linear-gradient(-45deg, #002420 0%, #5e85ba 77%, #d567ab 100%);
+  background: -o-linear-gradient(-45deg, #002420 0%, #5e85ba 77%, #d567ab 100%);
+  background: -ms-linear-gradient(-45deg, #002420 0%, #5e85ba 77%, #d567ab 100%);
+  background: linear-gradient(135deg, #002420 0%, #5e85ba 77%, #d567ab 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002420', endColorstr='#d567ab', GradientType=1 );
+}
+.box {
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}

@@ -1,0 +1,39 @@
+label {
+  margin-bottom: 1rem;
+}
+
+input {
+  padding: 2rem 1.5rem !important;
+  font-size: 1.5rem !important;
+}
+
+select {
+  height: 42px !important;
+  padding: 1rem !important;
+  font-size: 1.5rem !important;
+}
+textarea {
+  padding: 1rem 1.5rem !important;
+  font-size: 1.5rem !important;
+}
+
+.search {
+  position: relative;
+  input {
+    padding-left: 4rem !important;
+    padding-right: 3rem !important;
+    background-image: url($path-img + '/search.svg');
+    background-repeat: no-repeat;
+    background-size: 2rem;
+    background-position: left 1rem center;
+  }
+
+  img {
+    top: 50%;
+    right: 1rem;
+    width: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    transform: translateY(-50%);
+  }
+}
